@@ -1,10 +1,14 @@
 #!/bin/bash
 ./compile-dana.sh
 
-docker build . -t gcr.io/pfg2022/distributor -f app/distributor.Dockerfile
-docker build . -t gcr.io/pfg2022/remote-dist -f app/remotedist.Dockerfile
-docker build . -t gcr.io/pfg2022/server-ctl -f server-ctl/Dockerfile
+docker build -t distributor:latest -f- . < distributor.Dockerfile
+docker build -t remote-dist:latest -f- . < remotedist.Dockerfile
+docker build -t server-ctl:latest -f- . < serverCTL.Dockerfile
 
-docker push gcr.io/pfg2022/server-ctl:latest 
-docker push gcr.io/pfg2022/distributor:latest 
-docker push gcr.io/pfg2022/remote-dist:latest 
+docker tag distributor:latest robertovrf/distributor:latest
+docker tag remote-dist:latest robertovrf/remote-dist:latest
+docker tag server-ctl:latest robertovrf/server-ctl:latest
+
+docker push robertovrf/server-ctl:latest 
+docker push robertovrf/distributor:latest 
+docker push robertovrf/remote-dist:latest 
