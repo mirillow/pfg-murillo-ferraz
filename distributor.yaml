@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: distributor
-        image: robertovrf/distributor:latest
+        image: andrepapoti/distributor:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
