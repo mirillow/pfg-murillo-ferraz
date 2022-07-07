@@ -4,7 +4,7 @@
   "description": "GUI for running tests",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts"
+    "start": "npx ts-node src/index.ts "
   },
   "repository": {
     "type": "git",
