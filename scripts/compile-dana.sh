@@ -1,4 +1,4 @@
-cd ../app/client
+cd app/client
 dnc . -v
 cd ../readn
 dnc . -v
