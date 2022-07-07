@@ -1,5 +1,5 @@
 #!/bin/bash
-./compile-dana.sh
+./scripts/compile-dana.sh
 
 docker build -t distributor:latest -f- . < distributor.Dockerfile
 docker build -t remote-dist:latest -f- . < remotedist.Dockerfile
