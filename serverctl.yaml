@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: serverctl
-        image: robertovrf/server-ctl:latest
+        image: docker.io/murilloff/server-ctl:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

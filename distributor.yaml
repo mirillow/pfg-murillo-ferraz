@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: distributor
-        image: andrepapoti/distributor:latest
+        image: docker.io/murilloff/distributor:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 5000

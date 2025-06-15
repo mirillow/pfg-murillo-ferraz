@@ -1,13 +1,13 @@
 #!/bin/bash
 ./scripts/compile-dana.sh
 
-docker build . -t gcr.io/pfg2022/distributor -f app/distributor.Dockerfile
-docker build . -t gcr.io/pfg2022/remote-dist -f app/remotedist.Dockerfile
-docker build . -t gcr.io/pfg2022/server-ctl -f server-ctl/serverCTL.Dockerfile
+docker build . -t docker.io/murilloff/distributor -f app/distributor.Dockerfile
+docker build . -t docker.io/murilloff/remote-dist -f app/remotedist.Dockerfile
+docker build . -t docker.io/murilloff/server-ctl -f server-ctl/serverCTL.Dockerfile
 
-docker push gcr.io/pfg2022/server-ctl:latest 
-docker push gcr.io/pfg2022/distributor:latest 
-docker push gcr.io/pfg2022/remote-dist:latest 
+docker push docker.io/murilloff/server-ctl:latest 
+docker push docker.io/murilloff/distributor:latest 
+docker push docker.io/murilloff/remote-dist:latest 
 
 # docker build . -t andrepapoti/distributor -f ../app/distributor.Dockerfile
 # docker build . -t andrepapoti/remote-dist -f ../app/remotedist.Dockerfile
